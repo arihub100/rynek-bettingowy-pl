@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rynek zakładów bukmacherskich w Polsce — przykład</title>
+<style>
+  :root{
+    --navy:#12203F; --teal:#0E8F7E; --accent:#E4572E; --gold:#E9B949;
+    --ink:#232830; --grey:#5A6472; --light:#EEF2F7; --line:#D6DEE7; --bg:#fff;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.6;background:var(--bg)}
+  a{color:var(--teal)}
+  .wrap{max-width:980px;margin:0 auto;padding:0 22px}
+  header{background:linear-gradient(135deg,#12203F 0%,#1B335F 100%);color:#fff;padding:66px 0 54px}
+  header .eyebrow{color:var(--gold);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.78rem;margin:0 0 14px}
+  header h1{font-size:2.7rem;line-height:1.12;margin:0 0 14px;font-weight:800}
+  header p.sub{font-size:1.15rem;color:#C7D3E8;margin:0;max-width:680px}
+  nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;flex-wrap:wrap;gap:6px 20px;padding:12px 22px}
+  nav a{color:var(--navy);text-decoration:none;font-weight:600;font-size:.9rem}
+  nav a:hover{color:var(--teal)}
+  section{padding:44px 0;border-bottom:1px solid var(--line)}
+  h2{color:var(--navy);font-size:1.65rem;margin:0 0 8px}
+  h3{color:var(--teal);font-size:1.1rem;margin:22px 0 6px}
+  .lead{color:var(--grey);font-size:1.02rem;margin:0 0 18px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:8px 0}
+  .stat{background:var(--navy);color:#fff;border-radius:14px;padding:22px}
+  .stat .big{font-size:2.3rem;font-weight:800;color:var(--gold);line-height:1;display:block;margin-bottom:6px}
+  .stat .lbl{font-size:.9rem;color:#C7D3E8}
+  table{border-collapse:collapse;width:100%;margin:14px 0;font-size:.93rem}
+  th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+  th{background:var(--navy);color:#fff;font-weight:600}
+  tbody tr:nth-child(even){background:var(--light)}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+  .chip{background:var(--light);border:1px solid var(--line);border-radius:20px;padding:6px 14px;font-size:.9rem;font-weight:600;color:var(--navy)}
+  .chip.super{background:var(--teal);color:#fff;border-color:var(--teal)}
+  .callout{border-left:6px solid var(--accent);background:#FBEDE8;border-radius:8px;padding:14px 18px;margin:18px 0;font-size:.95rem}
+  .callout.note{border-left-color:var(--gold);background:#FCF4DC}
+  footer{padding:30px 0 60px;color:var(--grey);font-size:.82rem}
+  footer a{color:var(--grey)}
+  .src{font-size:.8rem;color:var(--grey)}
+  @media(max-width:560px){header h1{font-size:2.05rem}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">Przykładowa strona · demo</p>
+    <h1>Rynek zakładów bukmacherskich w Polsce</h1>
+    <p class="sub">Szybki przegląd: skala, regulacje, legalni operatorzy i największe wyzwanie branży. Strona przykładowa pokazująca, jak w kilka minut zamienić temat w gotowy, klikalny materiał.</p>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap">
+    <a href="#skala">Skala</a>
+    <a href="#regulacje">Regulacje</a>
+    <a href="#operatorzy">Operatorzy</a>
+    <a href="#szara">Szara strefa</a>
+    <a href="#podatek">Podatek</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<section id="skala">
+  <h2>Skala rynku w liczbach</h2>
+  <p class="lead">Polska to jeden z najszybciej rosnących rynków zakładów online w Europie Środkowej — ale z dużym „ale" w postaci nielegalnej konkurencji.</p>
+  <div class="stats">
+    <div class="stat"><span class="big">~18</span><span class="lbl">legalnych operatorów z licencją Ministerstwa Finansów</span></div>
+    <div class="stat"><span class="big">12%</span><span class="lbl">podatek od obrotu (od stawki) — ok. 60% GGR</span></div>
+    <div class="stat"><span class="big">~74 mld zł</span><span class="lbl">szacowane obroty szarej strefy hazardu (2025)</span></div>
+    <div class="stat"><span class="big">2017</span><span class="lbl">nowelizacja ustawy otwierająca licencjonowanie online</span></div>
+  </div>
+  <p class="src">Dane ilustracyjne, stan: lipiec 2026. Źródła na dole strony.</p>
+</section>
+
+<section id="regulacje">
+  <h2>Jak to jest uregulowane</h2>
+  <p>Rynek reguluje <strong>Ustawa o grach hazardowych</strong>, a licencji na urządzanie zakładów wzajemnych udziela <strong>Ministerstwo Finansów</strong>. Nowelizacja z 2017 r. umożliwiła legalne oferowanie zakładów przez internet i uruchomiła system licencjonowania operatorów online.</p>
+  <h3>Co musi spełnić legalny operator</h3>
+  <table>
+    <thead><tr><th>Wymóg</th><th>Na czym polega</th></tr></thead>
+    <tbody>
+      <tr><td>Zezwolenie MF</td><td>Licencja Ministra Finansów na zakłady wzajemne (odnawialna, np. na 6 lat).</td></tr>
+      <tr><td>Podatek od gier</td><td>Odprowadzanie 12% podatku od obrotu (od każdej postawionej stawki).</td></tr>
+      <tr><td>Weryfikacja wieku</td><td>Potwierdzenie pełnoletniości graczy (18+).</td></tr>
+      <tr><td>Odpowiedzialna gra</td><td>Narzędzia limitów, samowykluczenia i ochrony graczy.</td></tr>
+      <tr><td>Nadzór</td><td>Działanie pod kontrolą polskich instytucji, blokady domen nielegalnych.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="operatorzy">
+  <h2>Legalni operatorzy</h2>
+  <p class="lead">Na licencji MF działa kilkunastu bukmacherów. Poniżej wybrani (lista zmienna w czasie):</p>
+  <div class="chips">
+    <span class="chip super">Superbet</span>
+    <span class="chip">STS</span>
+    <span class="chip">Fortuna</span>
+    <span class="chip">Betclic</span>
+    <span class="chip">Betfan</span>
+    <span class="chip">LVBET</span>
+    <span class="chip">forBET</span>
+    <span class="chip">TOTALbet</span>
+    <span class="chip">E-TOTO</span>
+    <span class="chip">Fuksiarz</span>
+    <span class="chip">ComeOn</span>
+    <span class="chip">PZBUK</span>
+  </div>
+  <div class="callout note">
+    <strong>Superbet:</strong> licencja MF od 2019 r., ważna do 2030 r.; jeden z głównych pretendentów do pozycji lidera rynku.
+  </div>
+</section>
+
+<section id="szara">
+  <h2>Największe wyzwanie: szara strefa</h2>
+  <p>Mimo rosnącego legalnego rynku, ogromna część obrotu wciąż trafia do <strong>nielegalnych operatorów</strong> działających bez polskiej licencji. Szacunki mówią o obrotach szarej strefy hazardu rzędu <strong>~74 mld zł w 2025 r.</strong> — to bezpośrednia konkurencja odbierająca wpływy legalnym firmom i budżetowi państwa.</p>
+  <p>Główny mechanizm przewagi szarej strefy to brak 12-procentowego podatku od obrotu, co pozwala oferować wyższe kursy i „brak podatku" dla gracza.</p>
+</section>
+
+<section id="podatek">
+  <h2>Gorący temat: podatek od obrotu</h2>
+  <p>Model 12% <strong>od obrotu</strong> (a nie od zysku) jest przedmiotem sporu. Ponieważ podatek liczony jest od każdej postawionej stawki, realnie pochłania ok. <strong>60% GGR</strong> operatora. Branża argumentuje, że tak wysoka danina napędza szarą strefę i realnie obniża wpływy państwa.</p>
+  <div class="callout">
+    ⚠️ W debacie publicznej pojawiały się propozycje <strong>podniesienia podatku nawet do 15%</strong> od obrotu — co mogłoby dodatkowo pogłębić przewagę nielegalnych operatorów. To dobry przykład „krytycznego założenia" do monitorowania w strategii (patrz: warsztat Strategic Foresight).
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Strona przykładowa (demo).</strong> Dane mają charakter ilustracyjny; stan na lipiec 2026. Przed użyciem w decyzjach biznesowych zweryfikuj aktualne liczby u źródła.</p>
+    <p class="src">Źródła: legalniewsieci.pl (rynek 2026 i szara strefa), PIT.pl (podatek 12% i propozycja 15%), Forbes.pl (koszty wysokiego podatku), legalsport.pl / bukmacher-legalny.pl (lista licencjonowanych operatorów).</p>
+  </div>
+</footer>
+
+</body>
+</html>
