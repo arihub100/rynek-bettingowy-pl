@@ -35,10 +35,10 @@
   th{background:var(--navy);color:#fff;font-weight:600}
   tbody tr:nth-child(even){background:var(--light)}
   .chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
-  .chip{display:inline-block;background:var(--light);border:1px solid var(--line);border-radius:20px;padding:6px 14px;font-size:.9rem;font-weight:600;color:var(--navy);text-decoration:none;transition:.15s}
+  .chip{display:inline-block;font:inherit;cursor:pointer;background:var(--light);border:1px solid var(--line);border-radius:20px;padding:7px 15px;font-size:.9rem;font-weight:600;color:var(--navy);text-decoration:none;transition:.15s}
   .chip:hover{border-color:var(--teal);color:var(--teal)}
-  .chip.super{background:var(--teal);color:#fff;border-color:var(--teal)}
-  .chip.super:hover{color:#fff;border-color:#0a6b5e;background:#0a6b5e}
+  .chip.active{background:var(--teal);color:#fff;border-color:var(--teal)}
+  .callout.note a{color:var(--navy);font-weight:700;white-space:nowrap}
   .callout{border-left:6px solid var(--accent);background:#FBEDE8;border-radius:8px;padding:14px 18px;margin:18px 0;font-size:.95rem}
   .callout.note{border-left-color:var(--gold);background:#FCF4DC}
   footer{padding:30px 0 60px;color:var(--grey);font-size:.82rem}
@@ -100,22 +100,23 @@
 <section id="operatorzy">
   <h2>Legalni operatorzy</h2>
   <p class="lead">Na licencji MF działa kilkunastu bukmacherów. Poniżej wybrani (lista zmienna w czasie):</p>
-  <div class="chips">
-    <a class="chip super" href="https://superbet.pl" target="_blank" rel="noopener">Superbet</a>
-    <a class="chip" href="https://www.sts.pl" target="_blank" rel="noopener">STS</a>
-    <a class="chip" href="https://www.efortuna.pl" target="_blank" rel="noopener">Fortuna</a>
-    <a class="chip" href="https://www.betclic.pl" target="_blank" rel="noopener">Betclic</a>
-    <a class="chip" href="https://betfan.pl" target="_blank" rel="noopener">Betfan</a>
-    <a class="chip" href="https://lvbet.pl" target="_blank" rel="noopener">LVBET</a>
-    <a class="chip" href="https://www.forbet.pl" target="_blank" rel="noopener">forBET</a>
-    <a class="chip" href="https://totalbet.pl" target="_blank" rel="noopener">TOTALbet</a>
-    <a class="chip" href="https://www.etoto.pl" target="_blank" rel="noopener">E-TOTO</a>
-    <a class="chip" href="https://fuksiarz.pl" target="_blank" rel="noopener">Fuksiarz</a>
-    <a class="chip" href="https://www.comeon.pl" target="_blank" rel="noopener">ComeOn</a>
-    <a class="chip" href="https://pzbuk.pl" target="_blank" rel="noopener">PZBUK</a>
+  <p class="src">Kliknij bukmachera, aby zobaczyć krótki opis. „Otwórz stronę" prowadzi na witrynę operatora.</p>
+  <div class="chips" id="opChips">
+    <button type="button" class="chip active" data-url="https://superbet.pl" data-desc="Licencja MF od 2019 r., ważna do 2030 r.; jeden z głównych pretendentów do pozycji lidera rynku.">Superbet</button>
+    <button type="button" class="chip" data-url="https://www.sts.pl" data-desc="Jeden z największych bukmacherów w Polsce; silna pozycja w zakładach sportowych online i naziemnych.">STS</button>
+    <button type="button" class="chip" data-url="https://www.efortuna.pl" data-desc="Marka należąca do Fortuna Entertainment Group, obecna w kilku krajach regionu CEE.">Fortuna</button>
+    <button type="button" class="chip" data-url="https://www.betclic.pl" data-desc="Międzynarodowa marka (grupa Betclic), mocna w zakładach online.">Betclic</button>
+    <button type="button" class="chip" data-url="https://betfan.pl" data-desc="Polski bukmacher online z licencją MF, aktywny marketingowo.">Betfan</button>
+    <button type="button" class="chip" data-url="https://lvbet.pl" data-desc="Bukmacher z licencją MF; oferta zakładów online i w punktach naziemnych.">LVBET</button>
+    <button type="button" class="chip" data-url="https://www.forbet.pl" data-desc="Polski bukmacher z rozbudowaną siecią punktów naziemnych oraz ofertą online.">forBET</button>
+    <button type="button" class="chip" data-url="https://totalbet.pl" data-desc="Polska marka bukmacherska działająca online na licencji MF.">TOTALbet</button>
+    <button type="button" class="chip" data-url="https://www.etoto.pl" data-desc="Jeden z dłużej działających polskich bukmacherów z licencją MF.">E-TOTO</button>
+    <button type="button" class="chip" data-url="https://fuksiarz.pl" data-desc="Polski bukmacher online z licencją MF.">Fuksiarz</button>
+    <button type="button" class="chip" data-url="https://www.comeon.pl" data-desc="Marka międzynarodowej grupy ComeOn, działająca w Polsce na licencji MF.">ComeOn</button>
+    <button type="button" class="chip" data-url="https://pzbuk.pl" data-desc="Polska marka bukmacherska (PZBuk) z licencją MF.">PZBUK</button>
   </div>
-  <div class="callout note">
-    <strong>Superbet:</strong> licencja MF od 2019 r., ważna do 2030 r.; jeden z głównych pretendentów do pozycji lidera rynku.
+  <div class="callout note" id="opInfo">
+    <strong>Superbet:</strong> Licencja MF od 2019 r., ważna do 2030 r.; jeden z głównych pretendentów do pozycji lidera rynku. <a href="https://superbet.pl" target="_blank" rel="noopener">otwórz stronę →</a>
   </div>
 </section>
 
@@ -141,6 +142,20 @@
     <p class="src">Źródła: legalniewsieci.pl (rynek 2026 i szara strefa), PIT.pl (podatek 12% i propozycja 15%), Forbes.pl (koszty wysokiego podatku), legalsport.pl / bukmacher-legalny.pl (lista licencjonowanych operatorów).</p>
   </div>
 </footer>
+
+<script>
+(function(){
+  var chips = document.querySelectorAll('#opChips .chip');
+  var box = document.getElementById('opInfo');
+  function show(btn){
+    chips.forEach(function(c){ c.classList.remove('active'); });
+    btn.classList.add('active');
+    box.innerHTML = '<strong>' + btn.textContent + ':</strong> ' + btn.getAttribute('data-desc') +
+      ' <a href="' + btn.getAttribute('data-url') + '" target="_blank" rel="noopener">otwórz stronę →</a>';
+  }
+  chips.forEach(function(c){ c.addEventListener('click', function(){ show(c); }); });
+})();
+</script>
 
 </body>
 </html>
